@@ -40,13 +40,13 @@ function shuffle(array) {
 function kepek() {
   let txt = "";
   let srcs = [];
-  for (let index = 0; index < 20; index++) {
-    srcs.push("kepek/kep" + (index + 1) + ".jpg");
-    srcs.push("kepek/kep" + (index + 1) + ".jpg");
+  for (let index = 0; index < 10; index++) {
+    srcs.push("ruhak/kep" + (index + 1) + ".jpg");
+    srcs.push("ruhak/kep" + (index + 1) + ".jpg");
   }
   srcs = shuffle(srcs);
 
-  for (let index = 0; index < 40; index++) {
+  for (let index = 0; index < 20; index++) {
     objects.push(new Card(index, srcs[index], false));
     txt +=
       '<div class="' +
@@ -63,7 +63,7 @@ function kepek() {
 function isThereAWin() {
   let mindenOke = true;
   let index = 0;
-  while (mindenOke && index < 40) {
+  while (mindenOke && index < 20) {
     if (!objects[index].isFlipped) {
       mindenOke = false;
     }
@@ -92,21 +92,22 @@ function toggle() {
     }
   }
   if(isThereAWin()) {
-    document.getElementById("title").innerHTML = "<h1><span>Na</span><span>gy</span><span>on </span><span>Sz</span><span>ép </span><span>Gy</span><span>őz</span><span>el</span><span>em!</span></h1>"
-    let sizes = ["small", "smaller", "large", "larger"]
-    let spans = document.querySelectorAll("h1 span")
-    setInterval(() => {
-      spans[Math.floor(Math.random()*spans.length)].style.color = "RGB("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
-      spans[Math.floor(Math.random()*spans.length)].style.fontSize = sizes[Math.floor(Math.random()*sizes.length)];
+    // document.getElementById("title").innerHTML = "<h1><span>Fe</span><span>nn</span><span>tar</span><span>tha</span><span>tó </span><span>Gy</span><span>őz</span><span>el</span><span>em!</span></h1>"
+    // let sizes = ["small", "smaller", "large", "larger"]
+    // let spans = document.querySelectorAll("h1 span")
+    // setInterval(() => {
+    //   spans[Math.floor(Math.random()*spans.length)].style.color = "RGB("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+    //   spans[Math.floor(Math.random()*spans.length)].style.fontSize = sizes[Math.floor(Math.random()*sizes.length)];
       
-    }, 200)
+    // }, 200)
+    document.getElementById("title").innerHTML = "<h1>Győztél</h1>"
     
     
   };
 }
 
 function forditas() {
-  for (let index = 0; index < 40; index++) {
+  for (let index = 0; index < 20; index++) {
     ID(index).addEventListener("click", toggle);
   }
 }
