@@ -9,7 +9,7 @@ class Card {
 }
 
 let objects = [];
-
+let srcs = [];
 let FlippedCards = [];
 
 function ID(elem) {
@@ -37,14 +37,9 @@ function shuffle(array) {
   return array;
 }
 
-function kepek() {
+function kepek(forrasok) {
   let txt = "";
-  let srcs = [];
-  for (let index = 0; index < 10; index++) {
-    srcs.push("ruhak/kep" + (index + 1) + ".jpg");
-    srcs.push("ruhak/kep" + (index + 1) + ".jpg");
-  }
-  srcs = shuffle(srcs);
+  srcs = shuffle(forrasok);
 
   for (let index = 0; index < 20; index++) {
     objects.push(new Card(index, srcs[index], false));
@@ -53,7 +48,7 @@ function kepek() {
       "card" +
       '" id="' +
       index +
-      '"><div class="front"><img src="kepek/hatter.jpg" alt=""></div><div class="back"><img src="' +
+      '"><div class="front"><img src="" alt=""></div><div class="back"><img src="' +
       srcs[index] +
       '" alt=""></div></div>';
   }
@@ -112,7 +107,20 @@ function forditas() {
   }
 }
 function init() {
-  kepek();
-  forditas();
+  fetch("ruhak.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.ruhak.forEach((elem) => {
+        srcs.push(elem)
+        srcs.push(elem)
+      }) 
+      // console.log(srcs)
+      kepek(srcs);
+      forditas();
+    })
+  .catch((err) => {
+      console.log(err);
+  });
+
   
 }
