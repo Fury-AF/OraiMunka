@@ -19,12 +19,12 @@
             },
             {
                 "cim": "Hulladék mentes vásárlás",
-                "alcim1": "Csomagolás nélküli vásárlás Magyarországon",
+                "al1": "Csomagolás nélküli vásárlás Magyarországon",
                 "szov1": "Mára több mint 50 olyan bolt található Magyarországon, amelyben csomagolás nélkül tudunk vásárolni.  Ezekben a boltokba a vásárló saját üvegedényekkel, tárolóeszközökkel érkezik, és azokban tudja haza vinni a megvásárlandó termékeket. Ez nagyban elősegíti a hulladék termelés visszafogását.",
                 "kep1": "kepek/adagolo.jpg",
-                "alcim2": "Magyar példakép",
+                "al2": "Magyar példakép",
                 "szov2": "A magyar hulladékmentes mozgalom egyik kiemelkedő alakja Tóth Andi, aki mások inspirálása érdekében létrehozta a Háztartásom hulladék nélkül nevű blogját. A környezetbarát üzletek a fővárosba koncentrálódtak, de emellett az ország számos nagyvárosában és szinte az összes régiójában találni néhány boltot. Nyílt csomagolásmentes bolt Orosházán, Hajdúnánáson és Berettyóújfaluban is.",
-                "alcim3": "Mit is találhatunk egy ilyen boltban?",
+                "al3": "Mit is találhatunk egy ilyen boltban?",
                 "szov3": "Ezen üzletek általában bio, vegyszerektől mentes, kisüzemben gyártott hazai élelmiszereket árulnak, így számolni kell azzal, hogy a termékek valamivel drágábbak lesznek a megszokottnál. Az élelmiszer mellett számos boltban találkozhatunk kimérős tisztítószerekkel is, illetve általában a hulladékmentes életmód kellékeinek széles választékát is megtaláljuk, mint például vizes palack, textil szalvéta vagy fém szívószál.",
                 "kep3": "kepek/femszivoszal.jpg"
             }
